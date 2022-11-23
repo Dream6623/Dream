@@ -8,6 +8,12 @@ namespace App\Http\Service;
 class baidu
 {
     /**
+     * @param $url
+     * @param $param
+     * @return bool|string
+     * Date: 2022/11/16
+     * Time: 21:00
+     * User: 尘
      * 使用curl发送请求
      */
     public static function request_post($url = '', $param = '')
@@ -32,6 +38,10 @@ class baidu
     }
 
     /**
+     * @return bool|string
+     * Date: 2022/11/16
+     * Time: 21:17
+     * User: 尘
      * 获取token
      */
     public static function getToken()
@@ -51,6 +61,9 @@ class baidu
         return $res;
     }
 
+    /**
+     * 图片审核
+     */
     public static function pictureReview($token, $tmp_name)
     {
         $url = 'https://aip.baidubce.com/rest/2.0/solution/v1/img_censor/v2/user_defined?access_token=' . $token;
@@ -61,6 +74,19 @@ class baidu
         );
         $res = baidu::request_post($url, $bodys);
         $res = json_decode($res, true);
+        return $res;
+    }
+
+    /**
+     * 内容审核
+     */
+    public function textReview($comment)
+    {
+        $appId = env('BAIDU_RECORDS_APPID');
+        $apiKey = env('BAIDU_RECORDS_APIKEY');
+        $secretKey = env('BAIDU_RECORDS_SECRETKEY');
+        $client = new \Luffy\TextCensor\Core($appId, $apiKey, $secretKey);
+        $res = $client->textCensorUserDefined($comment);
         return $res;
     }
 
