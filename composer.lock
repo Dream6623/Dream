@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "686e308beee4d1808e888bde6bc604f4",
+    "content-hash": "d186e574a39b03b0b00dc932b1764b23",
     "packages": [
         {
             "name": "elasticsearch/elasticsearch",
@@ -522,7 +522,9 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=7.3.4"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.3.0"
 }

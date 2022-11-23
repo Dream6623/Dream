@@ -3,6 +3,7 @@
     "description": "a dream project",
     "type": "library",
     "require": {
+	   "php": ">=7.3.4",
         "elasticsearch/elasticsearch": "~6.0",
         "sy-records/baidu-textcensor": "^1.0",
         "firebase/php-jwt": "^6.3",
