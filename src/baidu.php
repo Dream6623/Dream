@@ -8,12 +8,6 @@ namespace App\Http\Service;
 class baidu
 {
     /**
-     * @param $url
-     * @param $param
-     * @return bool|string
-     * Date: 2022/11/16
-     * Time: 21:00
-     * User: 尘
      * 使用curl发送请求
      */
     public static function request_post($url = '', $param = '')
@@ -38,10 +32,6 @@ class baidu
     }
 
     /**
-     * @return bool|string
-     * Date: 2022/11/16
-     * Time: 21:17
-     * User: 尘
      * 获取token
      */
     public static function getToken()

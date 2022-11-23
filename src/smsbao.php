@@ -4,6 +4,9 @@ namespace App\Http\Service;
 
 class smsbao
 {
+    /**
+     * 发送短信
+     */
     public static function smsbao($phone, $code)
     {
         $statusStr = array(

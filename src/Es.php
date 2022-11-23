@@ -10,6 +10,9 @@ use Elasticsearch\ClientBuilder;
 
 class Es
 {
+    /**
+     * 创建文档
+     */
     public static function create_index($index, $type, $fields)
     {
         $client = ClientBuilder::create()->setHosts(['127.0.0.1:9200'])->build();
@@ -36,6 +39,9 @@ class Es
         return $client->indices()->create($params);
     }
 
+    /**
+     * 添加数据
+     */
     public static function Add($index, $type, $id, $body)
     {
         $client = ClientBuilder::create()->setHosts(['127.0.0.1:9200'])->build();
@@ -50,6 +56,9 @@ class Es
         return $client->index($params);
     }
 
+    /**
+     * 高亮搜索
+     */
     public static function search($index, $search)
     {
         $client = ClientBuilder::create()->setHosts(['127.0.0.1:9200'])->build();
