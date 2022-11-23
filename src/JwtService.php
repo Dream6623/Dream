@@ -11,20 +11,19 @@ use Firebase\JWT\Key;
 class JwtService
 {
     //受保护的密钥
-    protected static $key = 'Dream';
+    protected static $key = '****';
 
     /**
      * 创建token
      */
-    public static function CreateToken($u_id)
+    public static function CreateToken()
     {
         $token = [
             'iss' => 'http://work.org',
             'aud' => 'http://work.com',
             'iat' => time(),
             'nbf' => time(),
-            'exp' => time() + 84600,
-            'u_id' => $u_id
+            'exp' => time() + 3600
         ];
 
         $jwt = JWT::encode($token, self::$key, "HS256");
