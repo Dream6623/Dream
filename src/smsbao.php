@@ -21,8 +21,8 @@ class smsbao
             "50" => "内容含有敏感词"
         );
         $smsapi = "http://api.smsbao.com/";
-        $user = env('SMSBAO_USER'); //短信平台帐号
-        $pass = md5(env('SMSBAO_PASS')); //短信平台密码
+        $user = env('*******'); //短信平台帐号
+        $pass = md5(env('******')); //短信平台密码
         $content = "【Dream】:您的验证码为$code,该验证码将在3分钟后过期，请尽快使用";//要发送的短信内容
         $sendurl = $smsapi . "sms?u=" . $user . "&p=" . $pass . "&m=" . $phone . "&c=" . urlencode($content);
         $result = file_get_contents($sendurl);
