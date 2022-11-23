@@ -12,9 +12,9 @@ class qiniu
 {
     public static function qiniu($key, $filePath)
     {
-        $accessKey = env('QINIU_UPLOAD_ACCESSKEY');
-        $secretKey = env("QINIU_UPLOAD_SECRETKEY");
-        $bucket = env("QINIU_UPLOAD_BUCKET");
+        $accessKey = env('*************');
+        $secretKey = env("*************");
+        $bucket = env("*************");
         $uploadMgr = new UploadManager();
         $auth = new Auth($accessKey, $secretKey);
         $token = $auth->uploadToken($bucket);
