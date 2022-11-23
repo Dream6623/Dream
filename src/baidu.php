@@ -38,8 +38,8 @@ class baidu
     {
         $url = 'https://aip.baidubce.com/oauth/2.0/token';
         $post_data['grant_type'] = 'client_credentials';
-        $post_data['client_id'] = env('BAIDU_RECORDS_APIKEY');
-        $post_data['client_secret'] = env('BAIDU_RECORDS_SECRETKEY');
+        $post_data['client_id'] = env('*******');
+        $post_data['client_secret'] = env('*******');
         $o = "";
         foreach ($post_data as $k => $v) {
             $o .= "$k=" . urlencode($v) . "&";
@@ -72,9 +72,9 @@ class baidu
      */
     public function textReview($comment)
     {
-        $appId = env('BAIDU_RECORDS_APPID');
-        $apiKey = env('BAIDU_RECORDS_APIKEY');
-        $secretKey = env('BAIDU_RECORDS_SECRETKEY');
+        $appId = env('*********');
+        $apiKey = env('*********');
+        $secretKey = env('*********');
         $client = new \Luffy\TextCensor\Core($appId, $apiKey, $secretKey);
         $res = $client->textCensorUserDefined($comment);
         return $res;
