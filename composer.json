@@ -1,0 +1,24 @@
+{
+    "name": "dream6623/dream",
+    "description": "a dream project",
+    "type": "library",
+    "require": {
+        "elasticsearch/elasticsearch": "~6.0",
+        "sy-records/baidu-textcensor": "^1.0",
+        "firebase/php-jwt": "^6.3",
+        "qiniu/php-sdk": "^7.8"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Dream6623\\Dream\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "帅世明",
+            "email": "1770574743@qq.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
